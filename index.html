@@ -15,10 +15,32 @@
     <header></header>
     <main>
         <div></div>
-        <form></form>
+
+        <form method="GET" action="#" class="santaForm">
+            <div id="parentId">
+                <label for="lotteryInput">Введите дату жеребьёвки</label>
+                <input type="date" value="" id="lotteryInput">
+                <div class="field">
+                    <label>Имя администратора игры <input type="text"></label>
+                    <label>Электронный адрес администратора игры <input type="email"></label>
+                </div>
+                <div class="field">
+                    <label>Имя участника игры
+                        <input name="name_1" type="text">
+                    </label>
+                    <label>Электронный адрес участника игры
+                        <input name="email_1" type="email">
+                    </label>
+                    <a class="deleteButton" onclick="return deleteField(this)" href="#">[X]</a>
+                </div>
+            </div>
+            <a class="addButton" onclick="return addField()" href="#">Добавить поле</a>
+            <input class="s" type="submit" value="Создать игру!" />
+        </form>
+
     </main>
     <footer></footer>
-
+    <script src="index.js"></script>
 </body>
 
 </html>

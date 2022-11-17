@@ -16,4 +16,23 @@ input {
 .field {
   display: flex;
   flex-direction: row;
+}
+
+.deleteButton {
+  text-decoration: none;
+  margin-top: 20px;
+  height: 30px;
+}
+
+.addButton {
+  text-decoration: none;
+  border: 1px solid black;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+#emptyDiv {
+  width: 35em;
+  margin: 0 auto;
+  display: none;
 }/*# sourceMappingURL=index.css.map */

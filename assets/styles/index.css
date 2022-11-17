@@ -1,0 +1,19 @@
+html {
+  height: 100%;
+}
+
+.santaForm {
+  width: 35em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin: 5px;
+}
+
+.field {
+  display: flex;
+  flex-direction: row;
+}/*# sourceMappingURL=index.css.map */

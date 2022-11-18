@@ -16,7 +16,7 @@
     <main>
         <div></div>
 
-        <form method="GET" action="#" class="santaForm">
+        <form action="#" class="santaForm" id="form">
             <div id="parentId">
                 <label for="lotteryInput">Введите дату жеребьёвки</label>
                 <input type="date" value="" id="lotteryInput">
@@ -28,6 +28,9 @@
                     <label>Имя участника игры
                         <input name="name_1" type="text">
                     </label>
+                    <label>Почтовый адрес и индекс
+                        <input name="address_1" type="text">
+                    </label>
                     <label>Электронный адрес участника игры
                         <input name="email_1" type="email">
                     </label>
@@ -35,7 +38,7 @@
                 </div>
             </div>
             <a class="addButton" onclick="return addField()" href="#">Добавить поле</a>
-            <input class="s" type="submit" value="Создать игру!" />
+            <button class="s" type="submit">Создать игру!</button>
         </form>
 
     </main>

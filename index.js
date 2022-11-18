@@ -25,6 +25,9 @@ function addField() {
     <label>Имя участника игры
         <input name="name_${curFieldNameId}" type="text">
     </label>
+    <label>Почтовый адрес и индекс
+    <input name="address_${curFieldNameId}" type="text">
+</label>
     <label>Электронный адрес участника игры
         <input name="email_${curFieldNameId}" type="email">
     </label>
@@ -35,3 +38,33 @@ function addField() {
     // Возвращаем false, чтобы не было перехода по сслыке
     return false;
 }
+
+const {
+    form
+} = document.forms;
+
+function retrieveFormValue(event) {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    const values = Object.fromEntries(formData.entries());
+
+    console.log(values);
+    fetch('https://httpbin.org/post', {
+            method: 'POST',
+            body: JSON.stringify(values),
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+        })
+        .then(response => response.json())
+        .then(user => {
+            console.log(user);
+        })
+        .catch(error => console.log(error))
+
+
+}
+
+
+form.addEventListener('submit', retrieveFormValue);

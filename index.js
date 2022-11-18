@@ -50,16 +50,29 @@ function retrieveFormValue(event) {
     const values = Object.fromEntries(formData.entries());
 
     console.log(values);
+    let names = Array(...document.querySelectorAll('[name^=name]')).map(i => i.value)
+    let addresses = Array(...document.querySelectorAll('[name^=address]')).map(i => i.value)
+    let emails = Array(...document.querySelectorAll('[name^=email]')).map(i => i.value)
+    emails.push(emails.shift())
+    var result = []
+    for (let i = 0; i < emails.length; i++) {
+        result.push({
+            email: emails[i],
+            name: names[i],
+            address: addresses[i],
+        })
+    }
+
     fetch('https://httpbin.org/post', {
             method: 'POST',
-            body: JSON.stringify(values),
+            body: JSON.stringify(result),
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
             },
         })
         .then(response => response.json())
-        .then(user => {
-            console.log(user);
+        .then(values => {
+            console.log(values);
         })
         .catch(error => console.log(error))
 

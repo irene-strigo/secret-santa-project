@@ -8,11 +8,41 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/styles/normalize.css">
     <link rel="stylesheet" href="./assets/styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@300&family=Roboto+Slab:wght@200&family=Roboto:ital,wght@0,100;1,400&family=Space+Grotesk&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <div class="header__container">
+            <div class="header__container_logo">
+                <a href="index.html"><img class="logoimg" src="assets/images/cat-portrait.jpg"></a>
+            </div>
+            <div class="header__container_menu">
+                <div class="heading">Тайный санта</div>
+                <!-- (A) MENU WRAPPER -->
+                <nav class="hamnav">
+                    <!-- (B) THE HAMBURGER -->
+                    <label for="hamburger">&#9776;</label>
+                    <input type="checkbox" id="hamburger" />
+
+                    <!-- (C) MENU ITEMS -->
+                    <div class="hamitems">
+                        <a href="index.html">Главная страница</a>
+                        <a href="rules.html">Правила игры</a>
+                        <a href="gifts.html">Идеи подарков</a>
+
+                    </div>
+                </nav>
+
+            </div>
+
+        </div>
+    </header>
     <main>
         <div></div>
 
@@ -22,7 +52,7 @@
                 <input type="date" value="" id="lotteryInput">
                 <div class="field">
                     <label>Имя администратора игры <input type="text"></label>
-                    <label>Электронный адрес администратора игры <input type="email"></label>
+                    <label>Электронный адрес администратора <input type="email"></label>
                 </div>
                 <div class="field">
                     <label>Имя участника игры
@@ -31,14 +61,15 @@
                     <label>Почтовый адрес и индекс
                         <input name="address_1" type="text">
                     </label>
-                    <label>Электронный адрес участника игры
+                    <label>Электронный адрес участника
                         <input name="email_1" type="email">
                     </label>
-                    <a class="deleteButton" onclick="return deleteField(this)" href="#">[X]</a>
+                    <a class="deleteButton" onclick="return deleteField(this)" href="#">удалить</a>
                 </div>
             </div>
-            <a class="addButton" onclick="return addField()" href="#">Добавить поле</a>
-            <button class="s" type="submit">Создать игру!</button>
+            <a class="addButton" onclick="return addField()" href="#">Добавить участника</a>
+            <button class="goButton" type="submit">Создать игру!</button>
+            <div class="messageDiv"></div>
         </form>
 
     </main>

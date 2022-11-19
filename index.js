@@ -28,10 +28,10 @@ function addField() {
     <label>Почтовый адрес и индекс
     <input name="address_${curFieldNameId}" type="text">
 </label>
-    <label>Электронный адрес участника игры
+    <label>Электронный адрес участника
         <input name="email_${curFieldNameId}" type="email">
     </label>
-    <a class="deleteButton" onclick="return deleteField(this)" href="#">[X]</a>
+    <a class="deleteButton" onclick="return deleteField(this)" href="#">удалить</a>
 </div>`;
     // Добавляем новый узел в конец списка полей
     document.getElementById("parentId").appendChild(div);
@@ -50,11 +50,13 @@ function retrieveFormValue(event) {
     const values = Object.fromEntries(formData.entries());
 
     console.log(values);
-    let names = Array(...document.querySelectorAll('[name^=name]')).map(i => i.value)
-    let addresses = Array(...document.querySelectorAll('[name^=address]')).map(i => i.value)
-    let emails = Array(...document.querySelectorAll('[name^=email]')).map(i => i.value)
+
+    const santaForm = document.querySelector('.santaForm')
+    let names = Array(...santaForm.querySelectorAll('input[name^=name]')).map(i => i.value)
+    let addresses = Array(...santaForm.querySelectorAll('input[name^=address]')).map(i => i.value)
+    let emails = Array(...santaForm.querySelectorAll('input[name^=email]')).map(i => i.value)
     emails.push(emails.shift())
-    var result = []
+    const result = []
     for (let i = 0; i < emails.length; i++) {
         result.push({
             email: emails[i],
@@ -72,12 +74,13 @@ function retrieveFormValue(event) {
         })
         .then(response => response.json())
         .then(values => {
-            console.log(values);
+            console.log(values)
+            document.querySelector('.messageDiv').innerHTML = 'Данные игроков отправлены!';
         })
         .catch(error => console.log(error))
 
-
 }
+
 
 
 form.addEventListener('submit', retrieveFormValue);

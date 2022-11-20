@@ -25,10 +25,10 @@ function addField() {
     <label>Имя участника игры
         <input name="name_${curFieldNameId}" type="text">
     </label>
-    <label>Почтовый адрес и индекс
+    <label>Почтовый&nbspадрес и индекс
     <input name="address_${curFieldNameId}" type="text">
 </label>
-    <label>Электронный адрес участника
+    <label>Электронный&nbspадрес участника
         <input name="email_${curFieldNameId}" type="email">
     </label>
     <a class="deleteButton" onclick="return deleteField(this)" href="#">удалить</a>

@@ -14,13 +14,14 @@
         href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@300&family=Roboto+Slab:wght@200&family=Roboto:ital,wght@0,100;1,400&family=Space+Grotesk&display=swap"
         rel="stylesheet">
 
+
 </head>
 
 <body>
     <header>
         <div class="header__container">
             <div class="header__container_logo">
-                <a href="index.html"><img class="logoimg" src="assets/images/cat-portrait.jpg"></a>
+                <a href="index.html"><img class="logoimg" src="assets/images/cat-portrait-ny.jpg"></a>
             </div>
             <div class="header__container_menu">
                 <div class="heading">Тайный санта</div>
@@ -44,7 +45,58 @@
         </div>
     </header>
     <main>
-        <div></div>
+        <center>
+            <div class="text">
+                До нового года осталось:
+            </div>
+        </center>
+
+        <div id="timer" class="timer col">
+            <div class="timer-section">
+                <div class="days-block">
+                    <span class="days">
+                        <div id="day"></div>
+                    </span>
+                </div>
+                <span class="uncorrectDays">ДНЕЙ</span>
+            </div>
+
+            <div class="timer-section">
+                <div class="hours-block">
+                    <span class="hours">
+                        <div id="thour"> </div>
+                    </span>
+                </div>
+                <span class="uncorrectHours">ЧАСОВ</span>
+            </div>
+
+            <div class="timer-section">
+                <div class="minutes-block">
+                    <span class="minutes">
+                        <div id="tmin"></div>
+                    </span>
+                </div>
+                <span id="tmin" class="uncorrectMinutes">МИНУТ</span>
+            </div>
+
+            <div class="timer-section">
+                <div class="seconds-block">
+                    <span class="seconds">
+                        <div id="tsec"> </div>
+                    </span>
+                </div>
+                <span id="tsec" class="uncorrectSeconds">СЕКУНД</span>
+            </div>
+        </div>
+        <div class="infoDiv">
+            <h1>Что такое игра "Тайный санта"</h1>
+            <p>Это бесплатный онлайн-сервис по обмену рождественскими подарками! Организуйте вечеринку Тайного Санты для
+                друзей, членов семьи или даже коллег по работе. После получения письма от Тайного Санты вы сможете
+                добавить ваш список желаний,, который получит ваш Тайный Санта.
+
+                Каждый год, перед Рождеством, люди во всем мире обмениваются подарками.
+                Чтобы сохранить интригу, вы можете в случайном порядке назначить отправителей получателей подарков.</p>
+        </div>
 
         <form action="#" class="santaForm" id="form">
             <div id="parentId">
@@ -52,16 +104,16 @@
                 <input type="date" value="" id="lotteryInput">
                 <div class="field">
                     <label>Имя администратора игры <input type="text"></label>
-                    <label>Электронный адрес администратора <input type="email"></label>
+                    <label>Электронный&nbspадрес администратора <input type="email"></label>
                 </div>
                 <div class="field">
                     <label>Имя участника игры
                         <input name="name_1" type="text">
                     </label>
-                    <label>Почтовый адрес и индекс
+                    <label>Почтовый&nbspадрес и индекс
                         <input name="address_1" type="text">
                     </label>
-                    <label>Электронный адрес участника
+                    <label>Электронный&nbspадрес участника
                         <input name="email_1" type="email">
                     </label>
                     <a class="deleteButton" onclick="return deleteField(this)" href="#">удалить</a>
@@ -75,6 +127,7 @@
     </main>
     <footer></footer>
     <script src="index.js"></script>
+    <script src="indexKate.js"></script>
 </body>
 
 </html>

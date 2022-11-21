@@ -21,14 +21,19 @@ html {
   height: 100%;
 }
 
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .santaForm {
   width: 50em;
-  margin: 0 auto;
-  padding: 5px;
+  margin: 10px auto;
+  margin-bottom: 30px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   font-style: italic;
-  background-color: rgb(33, 172, 126);
+  background-color: rgb(186, 210, 191);
 }
 @media screen and (max-width: 768px) {
   .santaForm {
@@ -38,6 +43,7 @@ html {
 
 input {
   margin: 5px;
+  width: 80%;
 }
 
 .field {
@@ -64,11 +70,13 @@ input {
   text-decoration: none;
   margin-top: 25px;
   height: 30px;
+  border-radius: 10px;
 }
 
 .addButton {
   text-decoration: none;
   border: 1px solid black;
+  border-radius: 10px;
   margin: 10px auto;
   padding: 10px;
   color: white;
@@ -78,9 +86,10 @@ input {
 .goButton {
   width: 60%;
   margin: 0 auto;
+  border-radius: 10px;
   padding: 10px;
   color: white;
-  background-color: red;
+  background-color: rgba(180, 14, 14, 0.8);
   font-weight: 600;
   font-style: italic;
 }
@@ -287,6 +296,46 @@ input {
 }
 
 .infoDiv {
+  max-width: 70em;
   justify-self: center;
   text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.footer-container {
+  background-color: rgba(180, 14, 14, 0.8);
+  border: 1px solid black;
+  text-align: center;
+}
+
+.trees {
+  width: 8em;
+}
+
+.card-img {
+  width: 7em;
+}
+
+.cards {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .cards {
+    display: block;
+  }
+}
+
+.info-card {
+  border: 1px dashed red;
+  margin: 2em;
+  padding: 1em;
+  border-radius: 10px;
+  width: 20em;
+}
+@media screen and (max-width: 768px) {
+  .info-card {
+    width: 80%;
+    margin: 10px auto;
+  }
 }/*# sourceMappingURL=index.css.map */

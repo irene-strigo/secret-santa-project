@@ -84,3 +84,30 @@ function retrieveFormValue(event) {
 
 
 form.addEventListener('submit', retrieveFormValue);
+
+document.addEventListener("DOMContentLoaded", function () {
+    hand.classList.add('animated1');
+})
+scratchbtn.onclick = function () {
+    try {
+        hand.classList.remove('animated2');
+        hand1.classList.remove('animated2');
+        setTimeout(() => {
+            hand.classList.add('animated2');
+            hand1.classList.add('animated2');
+        }, 1)
+    } finally {
+        let thanks = ['мрр...', 'мрррр...', 'мррррр!'];
+        let element = document.getElementById('thanksdiv');
+
+        for (let i = 0; i < thanks.length; i++) {
+            setTimeout(() => {
+
+                element.innerHTML = `<p>${thanks [i]}</p>`;
+
+            }, (i + 1) * 1000)
+        }
+
+
+    }
+}

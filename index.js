@@ -64,22 +64,37 @@ function retrieveFormValue(event) {
             address: addresses[i],
         })
     }
+    let inputs = Array.from(document.querySelectorAll('input')).every(v => v.value)
 
-    fetch('https://httpbin.org/post', {
-            method: 'POST',
-            body: JSON.stringify(result),
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8'
-            },
-        })
-        .then(response => response.json())
-        .then(values => {
-            console.log(values)
-            document.querySelector('.messageDiv').innerHTML = 'Данные игроков отправлены!';
-        })
-        .catch(error => console.log(error))
+    if (inputs != '') {
+        fetch('https://httpbin.org/post', {
+                method: 'POST',
+                body: JSON.stringify(result),
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+            })
+            .then(response => response.json())
+            .then(values => {
+                console.log(values)
 
+                document.querySelector('.messageDiv').innerHTML = 'Данные игроков отправлены!';
+
+            })
+            .catch(error => console.log(error))
+
+
+    } else {
+        document.querySelector('.messageDiv').innerHTML = 'Заполните все поля формы';
+    }
 }
+
+
+
+
+
+
+
 
 
 

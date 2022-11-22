@@ -90,14 +90,6 @@ function retrieveFormValue(event) {
 }
 
 
-
-
-
-
-
-
-
-
 form.addEventListener('submit', retrieveFormValue);
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -112,7 +104,7 @@ scratchbtn.onclick = function () {
             hand1.classList.add('animated2');
         }, 1)
     } finally {
-        let thanks = ['мрр...', 'мрррр...', 'мррррр!'];
+        let thanks = ['мррpppp...', 'мррррpp!', 'спасибо!'];
         let element = document.getElementById('thanksdiv');
 
         for (let i = 0; i < thanks.length; i++) {

@@ -45,29 +45,25 @@ const {
 
 function retrieveFormValue(event) {
     event.preventDefault();
-
-    const formData = new FormData(form);
-    const values = Object.fromEntries(formData.entries());
-
-    console.log(values);
-
     const santaForm = document.querySelector('.santaForm')
-    let names = Array(...santaForm.querySelectorAll('input[name^=name]')).map(i => i.value)
-    let addresses = Array(...santaForm.querySelectorAll('input[name^=address]')).map(i => i.value)
-    let emails = Array(...santaForm.querySelectorAll('input[name^=email]')).map(i => i.value)
-    emails.push(emails.shift())
-    const result = []
-    for (let i = 0; i < emails.length; i++) {
-        result.push({
-            email: emails[i],
-            name: names[i],
-            address: addresses[i],
-        })
-    }
-    let inputs = Array.from(document.querySelectorAll('input')).every(v => v.value)
+    let inputsFilled = Array.from(document.querySelectorAll('input')).every(v => v.value)
+    if (inputsFilled === true) {
+        let names = Array(...santaForm.querySelectorAll('input[name^=name]')).map(i => i.value)
+        let addresses = Array(...santaForm.querySelectorAll('input[name^=address]')).map(i => i.value)
+        let emails = Array(...santaForm.querySelectorAll('input[name^=email]')).map(i => i.value)
 
-    if (inputs != '') {
-        fetch('https://httpbin.org/post', {
+
+        emails.push(emails.shift())
+        const result = []
+        for (let i = 0; i < emails.length; i++) {
+            result.push({
+                email: emails[i],
+                name: names[i],
+                address: addresses[i],
+            })
+        }
+
+        fetch('http://santa.strigo.ru/create', {
                 method: 'POST',
                 body: JSON.stringify(result),
                 headers: {
@@ -88,6 +84,9 @@ function retrieveFormValue(event) {
         document.querySelector('.messageDiv').innerHTML = 'Заполните все поля формы';
     }
 }
+
+
+
 
 
 form.addEventListener('submit', retrieveFormValue);

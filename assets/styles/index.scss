@@ -420,12 +420,12 @@ input {
 @keyframes slidein1 {
     from {
         left: 40%;
-        width: 24%;
+        width: 14%;
     }
 
     to {
         left: 1%;
-        width: 40%;
+        width: 21%;
     }
 
 }
@@ -480,8 +480,8 @@ input {
     .hand,
     .hand1 {
         position: absolute;
-        width: 8em;
-        margin-left: 13em;
+        width: 5em;
+        margin-left: 11em;
     }
 }
 
@@ -523,6 +523,11 @@ input {
     font-size: 3em;
     color: red;
     font-weight: 600;
+
+    @media screen and (max-width: 700px) {
+        font-size: 1em;
+    }
+
 
 }
 

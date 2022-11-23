@@ -103,7 +103,7 @@ scratchbtn.onclick = function () {
             hand1.classList.add('animated2');
         }, 1)
     } finally {
-        let thanks = ['мррpppp...', 'мррррpp!', 'спасибо!'];
+        let thanks = ['мррpppp...', 'мррррpp!', 'спасибо!', 'с наступающим!'];
         let element = document.getElementById('thanksdiv');
 
         for (let i = 0; i < thanks.length; i++) {

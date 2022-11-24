@@ -13,22 +13,6 @@ $grid-breakpoint-xxl: 1400px;
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'snowcapcyr';
-    src: url('snowcapcyr.woff2') format('woff2'),
-        url('snowcapcyr.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'penguin';
-    src: url('penguinattackcyrillic.woff2') format('woff2'),
-        url('penguinattackcyrillic.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 html {
     height: 100%;
 
@@ -55,7 +39,7 @@ body {
     }
 }
 
-input {
+.formInput {
     margin: 5px;
     width: 80%;
 }
@@ -109,7 +93,6 @@ input {
 }
 
 .header__container {
-    font-family: 'penguin';
     max-width: 1296px;
     max-height: 140px;
     margin: 0 auto;
@@ -299,7 +282,7 @@ input {
 .uncorrectMinutes,
 .uncorrectSeconds {
     font-size: 1em;
-    font-family: 'penguin';
+
 }
 
 /*      блоки хранящие цифры      */

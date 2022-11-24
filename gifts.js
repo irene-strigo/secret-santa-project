@@ -1,5 +1,4 @@
-//forked by https://codepen.io/zaurtigiev/pen/MZmgNG
-// garland.js
+
 window.onload = function() {
 	class Balls {
 		constructor(context, buffer) {
@@ -206,5 +205,15 @@ window.onload = function() {
 		shadow: false,
 		round: true,
 		
+	});
+});
+
+
+//snowfall 
+$(document).ready(function () {
+	$(document).snowfall({
+		image: "./snowfall/img/snow4.png",
+		minSize: 10,
+		maxSize: 20
 	});
 });

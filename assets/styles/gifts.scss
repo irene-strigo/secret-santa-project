@@ -4,9 +4,26 @@
 
 .decoration_image1 {
     float: right;
-    width: 15%;
+    width: 20%;
+    border-radius: 15px;
+}
+.decoration_image2 {
+    float:right; /* Обтекание картинки по левому краю */
+    //padding-left: 10px; /* Отступ слева */
+    //padding-bottom: 10px; 
+    border-radius: 15px;
+    width: 20%;
+}
+.decoration_image3{
+    float:left;
+    padding-right: 4%;
+    border-radius: 15px;
+    width: 20%;
 }
 
+hr{
+    color:greenyellow;
+}
 .decorations_body {
     background-color: rgba(0, 58, 209, 0.2);
     position: relative;

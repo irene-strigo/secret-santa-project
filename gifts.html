@@ -8,7 +8,6 @@
     <title>Идеи подарков</title>
     <link rel="stylesheet" href="./assets/styles/normalize.css">
     <link rel="stylesheet" href="./assets/styles/index.css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,8 +15,704 @@
         rel="stylesheet">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 </head>
+<style>
+    .decorations {
+        padding: 5%;
+    }
 
-<body class="decorations_body">
+    .decoration_image1 {
+        float: right;
+        width: 15%;
+    }
+
+    body {
+        background-color: rgba(0, 58, 209, 0.2);
+        position: relative;
+        z-index: 0;
+        margin: 0;
+        padding: 0 0 1em 0;
+        /* 	background-image: url('https://www.dropbox.com/s/7fsmf9uqbjtfaul/bg.jpg?dl=1'); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    .b-page_newyear {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .b-page__content {
+        min-height: 200px
+    }
+
+    .b-head-decor {
+        display: none
+    }
+
+    .b-page_newyear .b-head-decor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 115px;
+        width: 100%;
+        overflow: hidden;
+        background: url(https://www.dropbox.com/s/v9lpxcfepsvin60/b-head-decor_newyear.png?dl=1) repeat-x 0 0
+    }
+
+    .b-page_newyear .b-head-decor__inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 115px;
+        display: block;
+        width: 373px
+    }
+
+    .b-page_newyear .b-head-decor::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -115px;
+        left: 0;
+        z-index: 3;
+        height: 115px;
+        display: block;
+        width: 100%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.75)
+    }
+
+    .b-page_newyear .b-head-decor__inner_n2 {
+        left: 373px
+    }
+
+    .b-page_newyear .b-head-decor__inner_n3 {
+        left: 746px
+    }
+
+    .b-page_newyear .b-head-decor__inner_n4 {
+        left: 1119px
+    }
+
+    .b-page_newyear .b-head-decor__inner_n5 {
+        left: 1492px
+    }
+
+    .b-page_newyear .b-head-decor__inner_n6 {
+        left: 1865px
+    }
+
+    .b-page_newyear .b-head-decor__inner_n7 {
+        left: 2238px
+    }
+
+    .b-ball {
+        position: absolute
+    }
+
+    .b-ball_n1 {
+        top: 0;
+        left: 3px;
+        width: 59px;
+        height: 83px
+    }
+
+    .b-ball_n2 {
+        top: -19px;
+        left: 51px;
+        width: 55px;
+        height: 70px
+    }
+
+    .b-ball_n3 {
+        top: 9px;
+        left: 88px;
+        width: 49px;
+        height: 67px
+    }
+
+    .b-ball_n4 {
+        top: 0;
+        left: 133px;
+        width: 57px;
+        height: 102px
+    }
+
+    .b-ball_n5 {
+        top: 0;
+        left: 166px;
+        width: 49px;
+        height: 57px
+    }
+
+    .b-ball_n6 {
+        top: 6px;
+        left: 200px;
+        width: 54px;
+        height: 70px
+    }
+
+    .b-ball_n7 {
+        top: 0;
+        left: 240px;
+        width: 56px;
+        height: 67px
+    }
+
+    .b-ball_n8 {
+        top: 0;
+        left: 283px;
+        width: 54px;
+        height: 53px
+    }
+
+    .b-ball_n9 {
+        top: 10px;
+        left: 321px;
+        width: 49px;
+        height: 66px
+    }
+
+    .b-ball_n1 .b-ball__i {
+        background: url(https://www.dropbox.com/s/6uejpodl90ozcaj/b-ball_n1.png?dl=1) no-repeat
+    }
+
+    .b-ball_n2 .b-ball__i {
+        background: url(https://www.dropbox.com/s/ygy31out3i61ry8/b-ball_n2.png?dl=1) no-repeat
+    }
+
+    .b-ball_n3 .b-ball__i {
+        background: url(https://www.dropbox.com/s/uaffezwbvb4yuhd/b-ball_n3.png?dl=1) no-repeat
+    }
+
+    .b-ball_n4 .b-ball__i {
+        background: url(https://www.dropbox.com/s/j8q7itkqekxwt65/b-ball_n4.png?dl=1) no-repeat
+    }
+
+    .b-ball_n5 .b-ball__i {
+        background: url(https://www.dropbox.com/s/8d7jo6a8b7ngfcq/b-ball_n5.png?dl=1) no-repeat
+    }
+
+    .b-ball_n6 .b-ball__i {
+        background: url(https://www.dropbox.com/s/x9uqu3fe5cma2ra/b-ball_n6.png?dl=1) no-repeat
+    }
+
+    .b-ball_n7 .b-ball__i {
+        background: url(https://www.dropbox.com/s/vn9n8rsl3rfm5kx/b-ball_n7.png?dl=1) no-repeat
+    }
+
+    .b-ball_n8 .b-ball__i {
+        background: url(https://www.dropbox.com/s/kbba0lcmcbxjb6p/b-ball_n8.png?dl=1) no-repeat
+    }
+
+    .b-ball_n9 .b-ball__i {
+        background: url(https://www.dropbox.com/s/buok8jqo2plg1kh/b-ball_n9.png?dl=1) no-repeat
+    }
+
+    .b-ball_i1 .b-ball__i {
+        background: url(https://www.dropbox.com/s/ao4okf3y6xl6zfu/b-ball_i1.png?dl=1) no-repeat
+    }
+
+    .b-ball_i2 .b-ball__i {
+        background: url(https://www.dropbox.com/s/o0c0co1gxur78pu/b-ball_i2.png?dl=1) no-repeat
+    }
+
+    .b-ball_i3 .b-ball__i {
+        background: url(https://www.dropbox.com/s/hs4frdr0g1sk8qy/b-ball_i3.png?dl=1) no-repeat
+    }
+
+    .b-ball_i4 .b-ball__i {
+        background: url(https://www.dropbox.com/s/by8955xypx3rwkx/b-ball_i4.png?dl=1) no-repeat
+    }
+
+    .b-ball_i5 .b-ball__i {
+        background: url(https://www.dropbox.com/s/lwub7a629rbdsgf/b-ball_i5.png?dl=1) no-repeat
+    }
+
+    .b-ball_i6 .b-ball__i {
+        background: url(https://www.dropbox.com/s/3d0vxlzgutik2xn/b-ball_i6.png?dl=1) no-repeat
+    }
+
+    .b-ball_i1 {
+        top: 0;
+        left: 0;
+        width: 25px;
+        height: 71px
+    }
+
+    .b-ball_i2 {
+        top: 0;
+        left: 25px;
+        width: 61px;
+        height: 27px
+    }
+
+    .b-ball_i3 {
+        top: 0;
+        left: 176px;
+        width: 29px;
+        height: 31px
+    }
+
+    .b-ball_i4 {
+        top: 0;
+        left: 205px;
+        width: 50px;
+        height: 51px
+    }
+
+    .b-ball_i5 {
+        top: 0;
+        left: 289px;
+        width: 78px;
+        height: 28px
+    }
+
+    .b-ball_i6 {
+        top: 0;
+        left: 367px;
+        width: 6px;
+        height: 69px
+    }
+
+    .b-ball__i {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-transform-origin: 50% 0;
+        -moz-transform-origin: 50% 0;
+        -o-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        pointer-events: none
+    }
+
+    .b-ball_bounce .b-ball__right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 50%;
+        bottom: 0;
+        z-index: 9
+    }
+
+    .b-ball_bounce:hover .b-ball__right {
+        display: none
+    }
+
+    .b-ball_bounce .b-ball__right:hover {
+        left: 0;
+        display: block !important
+    }
+
+    .b-ball_bounce.bounce>.b-ball__i {
+        -webkit-transform: rotate(-9deg);
+        -moz-transform: rotate(-9deg);
+        -o-transform: rotate(-9deg);
+        transform: rotate(-9deg)
+    }
+
+    .b-ball_bounce .b-ball__right.bounce+.b-ball__i {
+        -webkit-transform: rotate(9deg);
+        -moz-transform: rotate(9deg);
+        -o-transform: rotate(9deg);
+        transform: rotate(9deg)
+    }
+
+    .b-ball_bounce.bounce1>.b-ball__i {
+        -webkit-transform: rotate(6deg);
+        -moz-transform: rotate(6deg);
+        -o-transform: rotate(6deg);
+        transform: rotate(6deg)
+    }
+
+    .b-ball_bounce .b-ball__right.bounce1+.b-ball__i {
+        -webkit-transform: rotate(-6deg);
+        -moz-transform: rotate(-6deg);
+        -o-transform: rotate(-6deg);
+        transform: rotate(-6deg)
+    }
+
+    .b-ball_bounce.bounce2>.b-ball__i {
+        -webkit-transform: rotate(-3deg);
+        -moz-transform: rotate(-3deg);
+        -o-transform: rotate(-3deg);
+        transform: rotate(-3deg)
+    }
+
+    .b-ball_bounce .b-ball__right.bounce2+.b-ball__i {
+        -webkit-transform: rotate(3deg);
+        -moz-transform: rotate(3deg);
+        -o-transform: rotate(3deg);
+        transform: rotate(3deg)
+    }
+
+    .b-ball_bounce.bounce3>.b-ball__i {
+        -webkit-transform: rotate(1.5deg);
+        -moz-transform: rotate(1.5deg);
+        -o-transform: rotate(1.5deg);
+        transform: rotate(1.5deg)
+    }
+
+    .b-ball_bounce .b-ball__right.bounce3+.b-ball__i {
+        -webkit-transform: rotate(-1.5deg);
+        -moz-transform: rotate(-1.5deg);
+        -o-transform: rotate(-1.5deg);
+        transform: rotate(-1.5deg)
+    }
+
+    body {
+        position: relative;
+        z-index: 0;
+        margin: 0;
+        padding: 0 0 1em 0;
+        /* 	background-image: url('https://www.dropbox.com/s/7fsmf9uqbjtfaul/bg.jpg?dl=1'); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    .b-page_newyear {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 102px;
+
+    }
+
+    .b-page__content {
+        min-height: 200px
+    }
+
+    .b-head-decor {
+        display: none
+    }
+
+    .b-page_newyear .b-head-decor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 115px;
+        width: 100%;
+        overflow: hidden;
+        background: url(https://www.dropbox.com/s/v9lpxcfepsvin60/b-head-decor_newyear.png?dl=1) repeat-x 0 0
+    }
+
+    .b-page_newyear .b-head-decor__inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 115px;
+        display: block;
+        width: 373px
+    }
+
+    .b-page_newyear .b-head-decor::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -115px;
+        left: 0;
+        z-index: 3;
+        height: 115px;
+        display: block;
+        width: 100%;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.75)
+    }
+
+    .b-page_newyear .b-head-decor__inner_n2 {
+        left: 373px
+    }
+
+    .b-page_newyear .b-head-decor__inner_n3 {
+        left: 746px
+    }
+
+    .b-page_newyear .b-head-decor__inner_n4 {
+        left: 1119px
+    }
+
+    .b-page_newyear .b-head-decor__inner_n5 {
+        left: 1492px
+    }
+
+    .b-page_newyear .b-head-decor__inner_n6 {
+        left: 1865px
+    }
+
+    .b-page_newyear .b-head-decor__inner_n7 {
+        left: 2238px
+    }
+
+    .b-ball {
+        position: absolute
+    }
+
+    .b-ball_n1 {
+        top: 0;
+        left: 3px;
+        width: 59px;
+        height: 83px
+    }
+
+    .b-ball_n2 {
+        top: -19px;
+        left: 51px;
+        width: 55px;
+        height: 70px
+    }
+
+    .b-ball_n3 {
+        top: 9px;
+        left: 88px;
+        width: 49px;
+        height: 67px
+    }
+
+    .b-ball_n4 {
+        top: 0;
+        left: 133px;
+        width: 57px;
+        height: 102px
+    }
+
+    .b-ball_n5 {
+        top: 0;
+        left: 166px;
+        width: 49px;
+        height: 57px
+    }
+
+    .b-ball_n6 {
+        top: 6px;
+        left: 200px;
+        width: 54px;
+        height: 70px
+    }
+
+    .b-ball_n7 {
+        top: 0;
+        left: 240px;
+        width: 56px;
+        height: 67px
+    }
+
+    .b-ball_n8 {
+        top: 0;
+        left: 283px;
+        width: 54px;
+        height: 53px
+    }
+
+    .b-ball_n9 {
+        top: 10px;
+        left: 321px;
+        width: 49px;
+        height: 66px
+    }
+
+    .b-ball_n1 .b-ball__i {
+        background: url(https://www.dropbox.com/s/6uejpodl90ozcaj/b-ball_n1.png?dl=1) no-repeat
+    }
+
+    .b-ball_n2 .b-ball__i {
+        background: url(https://www.dropbox.com/s/ygy31out3i61ry8/b-ball_n2.png?dl=1) no-repeat
+    }
+
+    .b-ball_n3 .b-ball__i {
+        background: url(https://www.dropbox.com/s/uaffezwbvb4yuhd/b-ball_n3.png?dl=1) no-repeat
+    }
+
+    .b-ball_n4 .b-ball__i {
+        background: url(https://www.dropbox.com/s/j8q7itkqekxwt65/b-ball_n4.png?dl=1) no-repeat
+    }
+
+    .b-ball_n5 .b-ball__i {
+        background: url(https://www.dropbox.com/s/8d7jo6a8b7ngfcq/b-ball_n5.png?dl=1) no-repeat
+    }
+
+    .b-ball_n6 .b-ball__i {
+        background: url(https://www.dropbox.com/s/x9uqu3fe5cma2ra/b-ball_n6.png?dl=1) no-repeat
+    }
+
+    .b-ball_n7 .b-ball__i {
+        background: url(https://www.dropbox.com/s/vn9n8rsl3rfm5kx/b-ball_n7.png?dl=1) no-repeat
+    }
+
+    .b-ball_n8 .b-ball__i {
+        background: url(https://www.dropbox.com/s/kbba0lcmcbxjb6p/b-ball_n8.png?dl=1) no-repeat
+    }
+
+    .b-ball_n9 .b-ball__i {
+        background: url(https://www.dropbox.com/s/buok8jqo2plg1kh/b-ball_n9.png?dl=1) no-repeat
+    }
+
+    .b-ball_i1 .b-ball__i {
+        background: url(https://www.dropbox.com/s/ao4okf3y6xl6zfu/b-ball_i1.png?dl=1) no-repeat
+    }
+
+
+    .b-ball_i2 .b-ball__i {
+        background: url(https://www.dropbox.com/s/o0c0co1gxur78pu/b-ball_i2.png?dl=1) no-repeat
+    }
+
+    .b-ball_i3 .b-ball__i {
+        background: url(https://www.dropbox.com/s/hs4frdr0g1sk8qy/b-ball_i3.png?dl=1) no-repeat
+    }
+
+    .b-ball_i4 .b-ball__i {
+        background: url(https://www.dropbox.com/s/by8955xypx3rwkx/b-ball_i4.png?dl=1) no-repeat
+    }
+
+    .b-ball_i5 .b-ball__i {
+        background: url(https://www.dropbox.com/s/lwub7a629rbdsgf/b-ball_i5.png?dl=1) no-repeat
+    }
+
+    .b-ball_i6 .b-ball__i {
+        background: url(https://www.dropbox.com/s/3d0vxlzgutik2xn/b-ball_i6.png?dl=1) no-repeat
+    }
+
+    .b-ball_i1 {
+        top: 0;
+        left: 0;
+        width: 25px;
+        height: 71px
+    }
+
+    .b-ball_i2 {
+        top: 0;
+        left: 25px;
+        width: 61px;
+        height: 27px
+    }
+
+    .b-ball_i3 {
+        top: 0;
+        left: 176px;
+        width: 29px;
+        height: 31px
+    }
+
+    .b-ball_i4 {
+        top: 0;
+        left: 205px;
+        width: 50px;
+        height: 51px
+    }
+
+    .b-ball_i5 {
+        top: 0;
+        left: 289px;
+        width: 78px;
+        height: 28px
+    }
+
+    .b-ball_i6 {
+        top: 0;
+        left: 367px;
+        width: 6px;
+        height: 69px
+    }
+
+    .b-ball__i {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-transform-origin: 50% 0;
+        -moz-transform-origin: 50% 0;
+        -o-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        pointer-events: none
+    }
+
+    .b-ball_bounce .b-ball__right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 50%;
+        bottom: 0;
+        z-index: 9
+    }
+
+    .b-ball_bounce:hover .b-ball__right {
+        display: none
+    }
+
+    .b-ball_bounce .b-ball__right:hover {
+        left: 0;
+        display: block !important
+    }
+
+    .b-ball_bounce.bounce>.b-ball__i {
+        -webkit-transform: rotate(-9deg);
+        -moz-transform: rotate(-9deg);
+        -o-transform: rotate(-9deg);
+        transform: rotate(-9deg)
+    }
+
+    .b-ball_bounce .b-ball__right.bounce+.b-ball__i {
+        -webkit-transform: rotate(9deg);
+        -moz-transform: rotate(9deg);
+        -o-transform: rotate(9deg);
+        transform: rotate(9deg)
+    }
+
+    .b-ball_bounce.bounce1>.b-ball__i {
+        -webkit-transform: rotate(6deg);
+        -moz-transform: rotate(6deg);
+        -o-transform: rotate(6deg);
+        transform: rotate(6deg)
+    }
+
+    .b-ball_bounce .b-ball__right.bounce1+.b-ball__i {
+        -webkit-transform: rotate(-6deg);
+        -moz-transform: rotate(-6deg);
+        -o-transform: rotate(-6deg);
+        transform: rotate(-6deg)
+    }
+
+    .b-ball_bounce.bounce2>.b-ball__i {
+        -webkit-transform: rotate(-3deg);
+        -moz-transform: rotate(-3deg);
+        -o-transform: rotate(-3deg);
+        transform: rotate(-3deg)
+    }
+
+    .b-ball_bounce .b-ball__right.bounce2+.b-ball__i {
+        -webkit-transform: rotate(3deg);
+        -moz-transform: rotate(3deg);
+        -o-transform: rotate(3deg);
+        transform: rotate(3deg)
+    }
+
+    .b-ball_bounce.bounce3>.b-ball__i {
+        -webkit-transform: rotate(1.5deg);
+        -moz-transform: rotate(1.5deg);
+        -o-transform: rotate(1.5deg);
+        transform: rotate(1.5deg)
+    }
+
+    .b-ball_bounce .b-ball__right.bounce3+.b-ball__i {
+        -webkit-transform: rotate(-1.5deg);
+        -moz-transform: rotate(-1.5deg);
+        -o-transform: rotate(-1.5deg);
+        transform: rotate(-1.5deg)
+    }
+</style>
+
+<body>
 
     <header>
         <div class="b-page_newyear">
@@ -464,7 +1159,7 @@
 
         <div class="header__container">
             <div class="header__container_logo">
-                <a href="index.html"><img class="logoimg" src="assets/images/sticker.webp"></a>
+                <a href="index.html"><img class="logoimg" src="assets/images/cat-portrait-ny.jpg"></a>
             </div>
             <div class="header__container_menu">
                 <div class="heading">Тайный санта</div>
@@ -497,8 +1192,7 @@
     <div class="decorations">
         <div>
             <h1>Как выбрать идеальный подарок?</h1>
-
-            <p><img class="decoration_image1" src="./assets/images/novogodnie-animacii-kartinki-09.gif"><i>Не все люди,
+            <p><img class="decoration_image1" src="./assets/images/novogodnie-animacii-kartinki-06.gif"><i>Не все люди,
                     играющие в "Тайного Санту", составляют список желаний (возможно, они просто любят сюрпризы). Поэтому
                     приходится ломать голову, что же им подарить. Или бывает ситуация, когда вас пригласили на Новый год
                     в компанию малознакомых людей, или вы спонтанно собрались в гости и не знаете, чем их порадовать.
@@ -517,62 +1211,45 @@
                 историю подарка, подчеркните положительное качество адресата либо просто расскажите то, что ему близко
                 по духу.</p>
         </div>
-        <hr>
+
 
         <div>
-
             <h2>5 правил выбора подарков</h2>
-            <p><img class="decoration_image2" src="./assets/images/novogodnie-animacii-kartinki-10.gif">
-                <ol>
-                    <li>Даже самые обыденные вещи в эксклюзивном варианте или экзотичном исполнении подходят в качестве
-                        подарка. Подарите необычные конфеты или печенье, или редкое украшение, или нечто дефицитное
-                        - вы будете удовлетворены эффектом. Если человек никогда не был за границей или в определённой
-                        стране, подарите гостинец оттуда, это будет особенный подарок.
-                    </li>
-                    <li>Не ждите до последней минуты, чтобы купить подарок. В этом случае вы столкнётесь с суетой,
-                        сниженным
-                        ассортиментом и повышенными ценами.
-                        В последнее время стали популярны распродажи в интернете. Самая громкая происходит ежегодно 11
-                        ноября в международный день шопинга, а следом за ней в четвёртый четверг ноября устраивают
-                        "Чёрную
-                        пятницу".
-                        Интернет-магазины в сезон распродаж хороши тем, что там можно купить очень оригинальные подарки,
-                        а
-                        доставка, как правило, бесплатна. Но покупки делайте заранее, чтобы вам не пришлось волноваться
-                        о
-                        том, что подарок опоздает к празднику.
-                    </li>
-                    <li>Покупайте то, что хочет получатель, а не то, что по вашему мнению интересно и привлекательно.
-                        Подарок будет особенно дорог, если человек поймёт, что он предназначен именно ему. Он оценит
-                        ваше
-                        время и усилия. Всегда при выборе подарка держите в голове образ получателя. Почувствуйте его
-                        индивидуальность.</li>
-                    <li>Мусор для одного - сокровище для другого, но только если сокровище всё ещё в идеальном состоянии
-                        и
-                        может быть полезным.</li>
-                    <li> Озвучивайте свои желания и составляйте списки желаний, это невероятно облегчит близким людям
-                        выбор
-                        желанного подарка для вас. И все будут счастливы. Если у вас трудности с выбором подарка
-                        близкому
-                        человеку, есть лайфхак на эту тему. Скажите ему: "Я приготовил тебе подарок, угадай какой?"
-                        Услышите
-                        сразу кучу вариантов :)</li>
-                </ol>
-            </p>
+            <ol>
+                <li>Даже самые обыденные вещи в эксклюзивном варианте или экзотичном исполнении подходят в качестве
+                    подарка. Подарите необычные, дорогие конфеты или печенье, или редкое украшение, или нечто дефицитное
+                    - вы будете удовлетворены эффектом. Если человек никогда не был за границей или в определённой
+                    стране, подарите гостинец оттуда, это будет особенный подарок.
+                </li>
+                <li>Не ждите до последней минуты, чтобы купить подарок. В этом случае вы столкнётесь с суетой, сниженным
+                    ассортиментом и повышенными ценами.
+                    В последнее время стали популярны распродажи в интернете. Самая громкая происходит ежегодно 11
+                    ноября в международный день шопинга, а следом за ней в четвёртый четверг ноября устраивают "Чёрную
+                    пятницу".
+                    Интернет-магазины в сезон распродаж хороши тем, что там можно купить очень оригинальные подарки, а
+                    доставка, как правило, бесплатна. Но покупки делайте заранее, чтобы вам не пришлось волноваться о
+                    том, что подарок опоздает к празднику.
+                </li>
+                <li>Покупайте то, что хочет получатель, а не то, что по вашему мнению интересно и привлекательно.
+                    Подарок будет особенно дорог, если человек поймёт, что он предназначен именно ему. Он оценит ваше
+                    время и усилия. Всегда при выборе подарка держите в голове образ получателя. Почувствуйте его
+                    индивидуальность.</li>
+                <li>Мусор для одного - сокровище для другого, но только если сокровище всё ещё в идеальном состоянии и
+                    может быть полезным.</li>
+                <li> Озвучивайте свои желания и составляйте списки желаний, это невероятно облегчит близким людям выбор
+                    желанного подарка для вас. И все будут счастливы. Если у вас трудности с выбором подарка близкому
+                    человеку, есть лайфхак на эту тему. Скажите ему: "Я приготовил тебе подарок, угадай какой?" Услышите
+                    сразу кучу вариантов :)</li>
+            </ol>
+
         </div>
-        <hr>
         <div>
-
-
             <h2> Лучший подарок для незнакомца</h2>
-            <p>
-                <img class="decoration_image3" src="./assets/images/656497861-min.gif">
-                Если вы мало знакомы с человеком, которому дарите подарок, у вас есть 3 варианта:
-                <ol>
-                    <li>расспросите людей такого же возраста и интересов, что они бы хотели получить в подарок</li>
-                    <li>расспросите знакомых об интересах и запросах человека</li>
-                    <li>поищете информацию о нём в соцсетях</li>
-            </p>
+            Если вы мало знакомы с человеком, которому дарите подарок, у вас есть 3 варианта:
+            <ol>
+                <li>расспросите людей такого же возраста и интересов, что они бы хотели получить в подарок</li>
+                <li>расспросите знакомых об интересах и запросах человека</li>
+                <li>поищете информацию о нём в соцсетях</li>
         </div>
         <div>
             Нас интересует:
@@ -591,51 +1268,80 @@
             </ul>
             </ol>
         </div>
-
         <div>
             <p> Обратите внимание, что он имеет в виду, когда говорит "я хочу...", "я не могу...", "мне нужно..."</p>
         </div>
         <div> Если у вас есть возможность побывать в офисе человека, обратите внимание на вещи, которые его окружают.
             Это подскажет вам, что он любит, а чего у него ещё нет.</div>
-        <div>
-            <p> Как правило, все участники оставляют своим тайным Сантам подсказки, чем их можно порадовать, но если вы
-                играете без конкретных пожеланий или именно ваш подопечный их не указал, подумайте о том, что может
-                стать хорошим подарком любому. Например:
-        </div>
-        <ul>
-            <li>билеты в кино, театр, музеи, на концерты. Даже если вы не знаете о вкусах одариваемого, это будет новый
-                опыт, что всегда интересно;</li>
-            <li>книга, которую вы сами с удовольствием прочитали. То, что вы смело можете посоветовать другу, порадует и
-                в качестве подарка;</li>
-            <li>тематические новогодние наборы: для принятия ароматной ванны, для варки глинтвейна, для изготовления
-                пряничного домика — то есть такие, которые пригодятся непосредственно на праздники;</li>
-            <li>чай, кофе, сладости — может, не очень изобретательно, зато почти беспроигрышно!</li>
-        </ul>
-        </p>
-        <hr>
-        <div>
-            <h2>Этикет дарения</h2>
-            <p>
 
-                <ul>
-                    <li>Если человек явно дал понять, что он хочет получить в подарок, то будет странно и невежливо
-                        дарить ему что-то другое.</li>
-                    <li>Подарки лучше дарить лично, это эмоционально связывает людей, т.к. помогает обменяться
-                        впечатлениями.</li>
-                    <li>Если вам вручили подарок, его надо сразу открыть и сказать спасибо. Фраза "приду домой,
-                        посмотрю" звучит бестактно.</li>
-                    <li>Если подарок вам преподнёс человек, от которого вы ничего не ждали, не делайте скептичное лицо.
-                        Он ведь просто хотел вас порадовать, а подарков много не бывает.</li>
-                    <img class="decoration_image4" src="./assets/images/novogodnie-animacii-kartinki-5.gif">
-                    <li>Вручая подарок, можно обнять человека, даже если вы мало знакомы. В этом нет ничего зазорного.
-                    </li>
-                    <li>Не заставляйте человека чувствовать себя обязанным подарить вам что-то в ответ.</li>
-                    <li>Если человек, которому вы вручили подарок, сделает ответный шаг во время вечеринки или в
-                        ближайшие пару недель, он явно к вам неравнодушен.</li>
-                    <li>По этикету стоимость подарка не должна превышать 5% от зарплаты того, кому дарите подарок.</li>
-                </ul>
-            </p>
-        </div>
+    </div>
+
+
+
+    <div>
+        <h1>Как выбрать идеальный подарок?</h1>
+        <p><i>Не все люди, играющие в "Тайного Санту", составляют список желаний (возможно, они просто любят
+                сюрпризы).
+                Поэтому приходится ломать голову, что же им подарить. Или бывает ситуация, когда вас пригласили на
+                Новый
+                год в компанию малознакомых людей, или вы спонтанно собрались в гости и не знаете, чем их
+                порадовать.
+                Прежде всего, подарки должны быть желанными, а не дежурными и бесполезными. Давайте определимся,
+                кому
+                что дарить, чтобы праздник искренне порадовал всех.</i></p>
+        <ol>
+            <li><b>Женщины</b> отсутствие подарка воспринимают как невнимание. Однако их может порадовать даже
+                мелочь,
+                сделанная оригинально и со вкусом.</li>
+            <li><b>Дети</b> ждут подарков всегда, т.к. их жизнь активна, а внимание быстро переключается. Поэтому
+                они
+                нуждаются в обновлении игрового пространства.</li>
+            <li><b>Мужчины</b> не так трепетно ожидают подарков, но и они оценят вашу заботу, если подарок вы
+                приготовите не дежурный, а интересный и подчёркивающий статус мужчины, а также чувства, которые вы
+                испытываете к нему.</li>
+        </ol>
+        <p>Кстати, интересным подарок может стать благодаря пожеланию, которое вы озвучите при вручении: расскажите
+            историю подарка, подчеркните положительное качество адресата либо просто расскажите то, что ему близко
+            по
+            духу.</p>
+    </div>
+
+
+    <div>
+        <h2>5 правил выбора подарков</h2>
+        <ol>
+            <li>Даже самые обыденные вещи в эксклюзивном варианте или экзотичном исполнении подходят в качестве
+                подарка.
+                Подарите необычные, дорогие конфеты или печенье, или редкое украшение, или нечто дефицитное - вы
+                будете
+                удовлетворены эффектом. Если человек никогда не был за границей или в определённой стране, подарите
+                гостинец оттуда, это будет особенный подарок.
+            </li>
+            <li>Не ждите до последней минуты, чтобы купить подарок. В этом случае вы столкнётесь с суетой, сниженным
+                ассортиментом и повышенными ценами.
+                В последнее время стали популярны распродажи в интернете. Самая громкая происходит ежегодно 11
+                ноября в
+                международный день шопинга, а следом за ней в четвёртый четверг ноября устраивают "Чёрную пятницу".
+                Интернет-магазины в сезон распродаж хороши тем, что там можно купить очень оригинальные подарки, а
+                доставка, как правило, бесплатна. Но покупки делайте заранее, чтобы вам не пришлось волноваться о
+                том,
+                что подарок опоздает к празднику.
+            </li>
+            <li>Покупайте то, что хочет получатель, а не то, что по вашему мнению интересно и привлекательно.
+                Подарок
+                будет особенно дорог, если человек поймёт, что он предназначен именно ему. Он оценит ваше время и
+                усилия. Всегда при выборе подарка держите в голове образ получателя. Почувствуйте его
+                индивидуальность.
+            </li>
+            <li>Мусор для одного - сокровище для другого, но только если сокровище всё ещё в идеальном состоянии и
+                может
+                быть полезным.</li>
+            <li> Озвучивайте свои желания и составляйте списки желаний, это невероятно облегчит близким людям выбор
+                желанного подарка для вас. И все будут счастливы. Если у вас трудности с выбором подарка близкому
+                человеку, есть лайфхак на эту тему. Скажите ему: "Я приготовил тебе подарок, угадай какой?" Услышите
+                сразу кучу вариантов :)</li>
+        </ol>
+
     </div>
 
     <footer>
@@ -651,6 +1357,16 @@
     <script src="index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/JQuery-Snowfall/1.7.4/snowfall.jquery.min.js"></script>
+    <script src='./snowfall/snowfall.js'></script>
+    <script src="js/snowfall.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(document).snowfall({
+                image: "./snowfall/img/snow4.png",
+                minSize: 10,
+                maxSize: 20
+            });
+        });
     </script>
 </body>
 

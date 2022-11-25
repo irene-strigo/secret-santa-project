@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Идеи подарков</title>
     <link rel="stylesheet" href="./assets/styles/normalize.css">
     <link rel="stylesheet" href="./assets/styles/index.css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat:wght@300&family=Roboto+Slab:wght@200&family=Roboto:ital,wght@0,100;1,400&family=Space+Grotesk&display=swap"
         rel="stylesheet">
-
-
 </head>
-
-<body>
+<body class="decorations_body">
     <header>
         <div class="b-page_newyear">
             <div class="b-page__content">
@@ -460,9 +455,11 @@
                 </i>
             </div>
         </div>
+
+
         <div class="header__container">
             <div class="header__container_logo">
-                <a href="index.html"><img class="logoimg" src="assets/images/cat-portrait-ny.jpg"></a>
+                <a href="index.html"><img class="logoimg" src="assets/images/cat-portrait-ny.jpg" alt=""></a>
             </div>
             <div class="header__container_menu">
                 <div class="heading">Тайный санта</div>
@@ -483,135 +480,91 @@
 
             </div>
             <div class="tree-container">
-                <img class="header-tree" src="assets/images/christmas-tree.png">
+                <img class="header-tree" src="assets/images/christmas-tree.png" alt="">
 
             </div>
 
         </div>
     </header>
-    <main>
+    <!--rules of game-->
+    <div class="rules">
 
-        <div class="text">
-            До нового года осталось:
-        </div>
+        <center>
+
+            <h1> Правила игры "Тайный Санта"</h1>
+
+            <b> Тайный Санта </b> - это весёлая новогодняя игра для дружной компании, в которой может участвовать
+            не менее 3 человек.
 
 
-        <div id="timer" class="timer col">
-            <div class="timer-section">
-                <div class="days-block">
-                    <span class="days">
-                        <div id="day"></div>
-                    </span>
-                </div>
-                <span class="uncorrectDays">ДНЕЙ</span>
-            </div>
+            <h2> Для кого подходит игра?</h2>
 
-            <div class="timer-section">
-                <div class="hours-block">
-                    <span class="hours">
-                        <div id="thour"> </div>
-                    </span>
-                </div>
-                <span class="uncorrectHours">ЧАСОВ</span>
-            </div>
+            - для компании друзей,<br>
+            - для рабочего коллектива,<br>
+            - для семейного круга<br>
 
-            <div class="timer-section">
-                <div class="minutes-block">
-                    <span class="minutes">
-                        <div id="tmin"></div>
-                    </span>
-                </div>
-                <span id="tmin" class="uncorrectMinutes">МИНУТ</span>
-            </div>
+            <h3>Преимущества игры:</h3>
+            - экономичность<br>
+            - интрига<br>
+            - возможность сплотить коллектив<br>
 
-            <div class="timer-section">
-                <div class="seconds-block">
-                    <span class="seconds">
-                        <div id="tsec"> </div>
-                    </span>
-                </div>
-                <span id="tsec" class="uncorrectSeconds">СЕКУНД</span>
-            </div>
-        </div>
-        <div class="infoDiv">
-            <h1>Что такое игра "Тайный санта"?</h1>
-            <p>Это возможность обменяться подарками со знакомыми или незнакомыми людьми. Традиционная рождественская
-                игра известна с давних пор, под разными названиями. Главная её
-                особенность в том, что
-                ты не знаешь от кого получишь свой подарок. Как правило, в игре не дарят дорогих подарков, сумма заранее
-                оговаривается в правилах.</p>
-            <h2>Как играть?</h2>
-            <div class="cards">
-                <div class="info-card">
-                    <img class="card-img" src="assets/images/confetti.png">
-                    <h3>Что нужно для начала игры:</h3>
-                    <p>Вам необходимо собрать не менее трёх желающих участвовать игроков, получить их имена, электронные
-                        и почтовые адреса. Определите дату жеребьёвки, в этот день вы отправляете данные игроков и
-                        запускаете игру.</p>
-                </div>
-                <div class="info-card">
-                    <img class="card-img" src="assets/images/spirals.png">
-                    <h3>Цена подарка:</h3>
-                    <p>Чтобы подарки были примерно одинаковой стоимости, определите максимальную сумму. Часто она бывает
-                        в
-                        пределах 15 евро или 1000 рублей</p>
-                </div>
-                <div class="info-card">
-                    <img class="card-img" src="assets/images/santa.png">
+            <h4> Суть игры</h4>
+            <p> Суть игры состоит в обмене подарками между всеми участниками.<br>
+                Имя человека, которому вы дарите подарок,выбирается случайным образом <br>
+                и сообщается только вам. До момента обмена подарками никто не знает, кто <br>
+                кому дарит подарок. И ни один участник, не знает, кому выпало его имя.</p>
 
-                    <h3>Как работает форма отправки:</h3>
-                    <p>Когда вы отправляете данные игроков на сервер, каждому электронному адресу присваивается имя и
-                        почтовый адрес другого игрока, которому нужно отправить подарок. Участник получает письмо и
-                        отправляет свой подарок по указанному там адресу.</p>
-                </div>
-            </div>
+            <p> Обмен подарками происходит в назначенную вами дату. <br>
+                До этого момента каждый участник должен подготовить подарок для своего адресата.</p> <br>
 
-        </div>
 
-        <form action="#" class="santaForm" id="form">
-            <div id="parentId">
-                <label for="lotteryInput">Введите дату жеребьёвки</label>
-                <input class="formInput" type="date" value="" id="lotteryInput">
-                <div class="field">
-                    <label>Имя администратора игры <input class="formInput" type="text"></label>
-                    <label>Электронный&nbspадрес администратора <input class="formInput" type="email"></label>
-                </div>
-                <div class="field">
-                    <label>Имя участника игры
-                        <input class="formInput" name="name_1" type="text">
-                    </label>
-                    <label>Почтовый&nbspадрес и индекс
-                        <input class="formInput" name="address_1" type="text">
-                    </label>
-                    <label>Электронный&nbspадрес участника
-                        <input class="formInput" name="email_1" type="email">
-                    </label>
-                    <a class="deleteButton" onclick="return deleteField(this)" href="#">удалить</a>
-                </div>
-            </div>
-            <a class="addButton" onclick="return addField()" href="#">Добавить участника</a>
-            <button class="goButton" type="submit">Создать игру!</button>
-            <div class="messageDiv"></div>
-        </form>
-        <div class="cat-container">
-            <div id="thanksdiv"></div>
-            <img class="cat" src="assets/images/reading-cat.png">
+            <h5> Пошаговая инструкция для организатора игры:</h5>
 
-            <img class="hand" class="animated" id="hand" src="assets/images/hand4.png">
-            <img class="hand1" class="animated" id="hand1" src="assets/images/hand3.png">
+            <p>
+                Первым делом назначьте администратора (человек, который вводит данные игроков), <br>
+                который запланирует и создаст событие.
+            </p>
+            <p> Игроки присылают свои данные:<br>
+                - имя участника игры<br>
+                - Почтовый адрес и индекс<br>
+                - Электронный адрес участника<br>
+            </p>
+            <p> После внесения данных администратором, на почту будут разосланы секретные сообщения <br>
+                с именем человека, которому он должен подарить подарок. </p>
+            <p> В разделе Идеи для подарков можно посмотреть различные варианты подарков.</p>
 
-            <button id="scratchbtn">погладь кота</button>
-        </div>
-    </main>
+
+        </center>
+    </div>
+
+    <div>
+        <img class="pngwing" src="assets/images/pngwing.com.png" alt="">
+    </div>
+
     <footer>
         <div class="footer-container">
             <p>&#169ITGIRLSCHOOL 2022</p>
             <p>frontend 29</p>
-            <img class="trees" src="assets/images/trees.png">
+            <img class="trees" src="assets/images/trees.png" alt="">
         </div>
+
+
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/JQuery-Snowfall/1.7.4/snowfall.jquery.min.js"></script>
     <script src="index.js"></script>
-    <script src="rules.js"></script>
+    <script src="gifts.js"></script>
+    <script src='./snowfall/snowfall.js'></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(document).snowfall({
+                image: "./snowfall/img/snow4.png",
+                minSize: 10,
+                maxSize: 20
+            });
+        });
+    </script>
 </body>
 
 </html>

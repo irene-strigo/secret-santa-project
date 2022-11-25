@@ -1,5 +1,4 @@
-
-window.onload = function() {
+window.onload = function () {
 	class Balls {
 		constructor(context, buffer) {
 			this.context = context;
@@ -23,7 +22,7 @@ window.onload = function() {
 			this.source.stop(ct);
 		}
 	}
-	
+
 	class Buffer {
 		constructor(context, urls) {
 			this.context = context;
@@ -35,11 +34,11 @@ window.onload = function() {
 			request.open('get', url, true);
 			request.responseType = 'arraybuffer';
 			let thisBuffer = this;
-			request.onload = function() {
+			request.onload = function () {
 				thisBuffer.context
-					.decodeAudioData(request.response, function(buffer) {
+					.decodeAudioData(request.response, function (buffer) {
 						thisBuffer.buffer[index] = buffer;
-						if(index == thisBuffer.urls.length-1) {
+						if (index == thisBuffer.urls.length - 1) {
 							thisBuffer.loaded();
 						}
 					});
@@ -58,18 +57,18 @@ window.onload = function() {
 			return this.buffer[index];
 		}
 	}
-	
+
 	let balls = null,
-			preset = 0,
-			loaded = false;
+		preset = 0,
+		loaded = false;
 	let path = 'https://www.dropbox.com/s/05gcrmyolkj5pt0/';
 	let sounds = [
-		path + 'sound1.mp3' + '?dl=1',
-		path + 'sound2.mp3' + '?dl=1',
-		path + 'sound3.mp3' + '?dl=1',
+		`${path}sound1.mp3?dl=1`,
+		`${path}sound2.mp3?dl=1`,
+		`${path}sound3.mp3?dl=1`,
 		path + 'sound4.mp3' + '?dl=1',
 		path + 'sound5.mp3' + '?dl=1',
-		path + 'sound6.mp3' + '?dl=1',
+		`${path}sound6.mp3?dl=1`,
 		path + 'sound7.mp3' + '?dl=1',
 		path + 'sound8.mp3' + '?dl=1',
 		path + 'sound9.mp3' + '?dl=1',
@@ -94,7 +93,7 @@ window.onload = function() {
 		path + 'sound28.mp3' + '?dl=1',
 		path + 'sound29.mp3' + '?dl=1',
 		path + 'sound30.mp3' + '?dl=1',
-		path + 'sound31.mp3' + '?dl=1',
+		`${path}sound31.mp3?dl=1`,
 		path + 'sound32.mp3' + '?dl=1',
 		path + 'sound33.mp3' + '?dl=1',
 		path + 'sound34.mp3' + '?dl=1',
@@ -105,17 +104,17 @@ window.onload = function() {
 	let context = new AudioContext();
 
 	$(".b-head-decor").trigger("click");
-	
+
 	function playBalls() {
 		let index = parseInt(this.dataset.note) + preset;
 		balls = new Balls(context, buffer.getSound(index));
 		balls.play();
 	}
-	
+
 	function stopBalls() {
 		balls.stop();
 	}
-	
+
 	let buffer = new Buffer(context, sounds);
 	let ballsSound = buffer.getBuffer();
 	let buttons = document.querySelectorAll('.b-ball_bounce');
@@ -123,26 +122,30 @@ window.onload = function() {
 		button.addEventListener('mouseenter', playBalls.bind(button));
 		button.addEventListener('mouseleave', stopBalls);
 	})
-	
+
 	function ballBounce(e) {
 		var i = e;
 		if (e.className.indexOf(" bounce") > -1) {
-		return;
+			return;
 		}
 		toggleBounce(i);
 	}
-	
-	function toggleBounce(i){
+
+	function toggleBounce(i) {
 		i.classList.add("bounce");
+
 		function n() {
 			i.classList.remove("bounce")
 			i.classList.add("bounce1");
+
 			function o() {
 				i.classList.remove("bounce1")
 				i.classList.add("bounce2");
+
 				function p() {
 					i.classList.remove("bounce2")
 					i.classList.add("bounce3");
+
 					function q() {
 						i.classList.remove("bounce3");
 					}
@@ -154,32 +157,32 @@ window.onload = function() {
 		}
 		setTimeout(n, 300)
 	}
-	
+
 	var array1 = document.querySelectorAll('.b-ball_bounce')
 	var array2 = document.querySelectorAll('.b-ball_bounce .b-ball__right')
-	
-	for(var i=0; i<array1.length; i++){
-		array1[i].addEventListener('mouseenter', function(){
+
+	for (var i = 0; i < array1.length; i++) {
+		array1[i].addEventListener('mouseenter', function () {
 			ballBounce(this)
 		})
 	}
-	
-	for(var i=0; i<array2.length; i++){
-		array2[i].addEventListener('mouseenter', function(){
+
+	for (var i = 0; i < array2.length; i++) {
+		array2[i].addEventListener('mouseenter', function () {
 			ballBounce(this)
 		})
 	}
-	
+
 	let l = ["49", "50", "51", "52", "53", "54", "55", "56", "57", "48", "189", "187", "81", "87", "69", "82", "84", "89", "85", "73", "79", "80", "219", "221", "65", "83", "68", "70", "71", "72", "74", "75", "76", "186", "222", "220"];
 	let k = ["90", "88", "67", "86", "66", "78", "77", "188", "190", "191"];
 	let a = {};
 	for (let e = 0, c = l.length; e < c; e++) {
-			a[l[e]] = e
+		a[l[e]] = e
 	}
 	for (let e = 0, c = k.length; e < c; e++) {
-			a[k[e]] = e
+		a[k[e]] = e
 	}
-	
+
 	document.addEventListener('keydown', function (j) {
 		let i = j.target;
 		if (j.which in a) {
@@ -190,21 +193,21 @@ window.onload = function() {
 			toggleBounce(ball);
 		}
 	});
-	
+
 }
 
 // create snowfall
- jQuery(function($){
+jQuery(function ($) {
 	$('#dnn_whiteHolder').snowfall({
-		image :"https://www.dropbox.com/s/e947ssx967uvwju/snow1.png?dl=1", 
-		minSize: 2, 
-		maxSize:10,
+		image: "https://www.dropbox.com/s/e947ssx967uvwju/snow1.png?dl=1",
+		minSize: 2,
+		maxSize: 10,
 		maxSpeed: 0.75,
 		minSpeed: 0.5,
 		flakeCount: 100,
 		shadow: false,
 		round: true,
-		
+
 	});
 });
 

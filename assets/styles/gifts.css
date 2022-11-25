@@ -1,10 +1,29 @@
+@charset "UTF-8";
 .decorations {
   padding: 5%;
 }
 
 .decoration_image1 {
   float: right;
-  width: 15%;
+  width: 20%;
+  border-radius: 15px;
+}
+
+.decoration_image2 {
+  float: right; /* Обтекание картинки по левому краю */
+  border-radius: 15px;
+  width: 20%;
+}
+
+.decoration_image3 {
+  float: left;
+  padding-right: 4%;
+  border-radius: 15px;
+  width: 20%;
+}
+
+hr {
+  color: greenyellow;
 }
 
 .decorations_body {

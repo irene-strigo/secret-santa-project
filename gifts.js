@@ -149,13 +149,13 @@ window.onload = function () {
 					function q() {
 						i.classList.remove("bounce3");
 					}
-					setTimeout(q, 300)
+					setTimeout(q, 200)
 				}
-				setTimeout(p, 300)
+				setTimeout(p, 200)
 			}
-			setTimeout(o, 300)
+			setTimeout(o, 200)
 		}
-		setTimeout(n, 300)
+		setTimeout(n, 200)
 	}
 
 	var array1 = document.querySelectorAll('.b-ball_bounce')

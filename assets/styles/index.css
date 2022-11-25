@@ -857,4 +857,12 @@ hr {
 
 .b-ball_bounce .b-ball__right.bounce3 + .b-ball__i {
   transform: rotate(-1.5deg);
+}
+
+.pngwing {
+  margin-top: -1000px;
+}
+
+.rules {
+  margin-top: 100px;
 }/*# sourceMappingURL=index.css.map */

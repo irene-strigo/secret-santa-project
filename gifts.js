@@ -28,6 +28,7 @@ window.onload = function () {
 			this.context = context;
 			this.urls = urls;
 			this.buffer = [];
+			this.getBuffer();
 		}
 		loadSound(url, index) {
 			let request = new XMLHttpRequest();
@@ -38,7 +39,7 @@ window.onload = function () {
 				thisBuffer.context
 					.decodeAudioData(request.response, function (buffer) {
 						thisBuffer.buffer[index] = buffer;
-						if (index == thisBuffer.urls.length - 1) {
+						if (index === thisBuffer.urls.length - 1) {
 							thisBuffer.loaded();
 						}
 					});
@@ -61,49 +62,12 @@ window.onload = function () {
 	let balls = null,
 		preset = 0,
 		loaded = false;
-	let path = 'https://www.dropbox.com/s/05gcrmyolkj5pt0/';
-	let sounds = [
-		`${path}sound1.mp3?dl=1`,
-		`${path}sound2.mp3?dl=1`,
-		`${path}sound3.mp3?dl=1`,
-		path + 'sound4.mp3' + '?dl=1',
-		path + 'sound5.mp3' + '?dl=1',
-		`${path}sound6.mp3?dl=1`,
-		path + 'sound7.mp3' + '?dl=1',
-		path + 'sound8.mp3' + '?dl=1',
-		path + 'sound9.mp3' + '?dl=1',
-		path + 'sound10.mp3' + '?dl=1',
-		path + 'sound11.mp3' + '?dl=1',
-		path + 'sound12.mp3' + '?dl=1',
-		path + 'sound13.mp3' + '?dl=1',
-		path + 'sound14.mp3' + '?dl=1',
-		path + 'sound15.mp3' + '?dl=1',
-		path + 'sound16.mp3' + '?dl=1',
-		path + 'sound17.mp3' + '?dl=1',
-		path + 'sound18.mp3' + '?dl=1',
-		path + 'sound19.mp3' + '?dl=1',
-		path + 'sound20.mp3' + '?dl=1',
-		path + 'sound21.mp3' + '?dl=1',
-		path + 'sound22.mp3' + '?dl=1',
-		path + 'sound23.mp3' + '?dl=1',
-		path + 'sound24.mp3' + '?dl=1',
-		path + 'sound25.mp3' + '?dl=1',
-		path + 'sound26.mp3' + '?dl=1',
-		path + 'sound27.mp3' + '?dl=1',
-		path + 'sound28.mp3' + '?dl=1',
-		path + 'sound29.mp3' + '?dl=1',
-		path + 'sound30.mp3' + '?dl=1',
-		`${path}sound31.mp3?dl=1`,
-		path + 'sound32.mp3' + '?dl=1',
-		path + 'sound33.mp3' + '?dl=1',
-		path + 'sound34.mp3' + '?dl=1',
-		path + 'sound35.mp3' + '?dl=1',
-		path + 'sound36.mp3' + '?dl=1'
-	];
+	let sounds = []
+	for (let i = 1; i<=36; i++) {
+		sounds.push('./assets/sounds/sound1.mp3')
+	}
 	window.AudioContext = window.AudioContext || window.webkitAudioContext;
 	let context = new AudioContext();
-
-	$(".b-head-decor").trigger("click");
 
 	function playBalls() {
 		let index = parseInt(this.dataset.note) + preset;
@@ -116,7 +80,6 @@ window.onload = function () {
 	}
 
 	let buffer = new Buffer(context, sounds);
-	let ballsSound = buffer.getBuffer();
 	let buttons = document.querySelectorAll('.b-ball_bounce');
 	buttons.forEach(button => {
 		button.addEventListener('mouseenter', playBalls.bind(button));
@@ -195,28 +158,3 @@ window.onload = function () {
 	});
 
 }
-
-// create snowfall
-jQuery(function ($) {
-	$('#dnn_whiteHolder').snowfall({
-		image: "https://www.dropbox.com/s/e947ssx967uvwju/snow1.png?dl=1",
-		minSize: 2,
-		maxSize: 10,
-		maxSpeed: 0.75,
-		minSpeed: 0.5,
-		flakeCount: 100,
-		shadow: false,
-		round: true,
-
-	});
-});
-
-
-//snowfall 
-$(document).ready(function () {
-	$(document).snowfall({
-		image: "./snowfall/img/snow4.png",
-		minSize: 10,
-		maxSize: 20
-	});
-});

@@ -64,12 +64,12 @@ function retrieveFormValue(event) {
         }
 
         fetch('http://santa.strigo.ru/create', {
-                method: 'POST',
-                body: JSON.stringify(result),
-                headers: {
-                    'Content-Type': 'application/json;charset=utf-8'
-                },
-            })
+            method: 'POST',
+            body: JSON.stringify(result),
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+        })
             .then(response => response.json())
             .then(values => {
                 console.log(values)
@@ -84,9 +84,6 @@ function retrieveFormValue(event) {
         document.querySelector('.messageDiv').innerHTML = 'Заполните все поля формы';
     }
 }
-
-
-
 
 
 form.addEventListener('submit', retrieveFormValue);
@@ -117,3 +114,35 @@ scratchbtn.onclick = function () {
 
     }
 }
+
+function setCountdownValue(id, value) {
+    document.getElementById(id).innerHTML = value;
+}
+
+const durationToSeconds = {
+    tday: 86400,
+    thour: 3600,
+    tmin: 60,
+    tsec: 1
+}
+const timeend = new Date(2023, 0, 1, 0, 0, 0);
+
+function countdown() {
+    let diff = Math.floor((timeend.getTime() - new Date().getTime()) / 1000);
+
+    if (diff <= 0) {
+        for (let durationName of Object.keys(durationToSeconds)) {
+            setCountdownValue(durationName, 0)
+        }
+        return
+    }
+
+    for (let durationName of Object.keys(durationToSeconds)) {
+        const secondsInDuration = durationToSeconds[durationName]
+        const value = Math.floor(diff / secondsInDuration)
+        setCountdownValue(durationName, value)
+        diff -= value * secondsInDuration
+    }
+}
+
+setInterval(countdown, 200);

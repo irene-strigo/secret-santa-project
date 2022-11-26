@@ -23,13 +23,13 @@ function addField() {
     // Добавляем HTML-контент с пом. свойства innerHTML
     div.innerHTML = `<div class="field">
     <label>Имя участника игры
-        <input name="name_${curFieldNameId}" type="text">
+        <input class="formInput" name="name_${curFieldNameId}" type="text">
     </label>
     <label>Почтовый&nbspадрес и индекс
-    <input name="address_${curFieldNameId}" type="text">
+    <input class="formInput"name="address_${curFieldNameId}" type="text">
 </label>
     <label>Электронный&nbspадрес участника
-        <input name="email_${curFieldNameId}" type="email">
+        <input class="formInput" name="email_${curFieldNameId}" type="email">
     </label>
     <a class="deleteButton" onclick="return deleteField(this)" href="#">удалить</a>
 </div>`;
@@ -64,12 +64,12 @@ function retrieveFormValue(event) {
         }
 
         fetch('http://santa.strigo.ru/create', {
-            method: 'POST',
-            body: JSON.stringify(result),
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8'
-            },
-        })
+                method: 'POST',
+                body: JSON.stringify(result),
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+            })
             .then(response => response.json())
             .then(values => {
                 console.log(values)

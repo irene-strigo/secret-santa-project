@@ -862,7 +862,27 @@ hr {
 .pngwing {
   margin-top: -1000px;
 }
+@media screen and (max-width: 992px) {
+  .pngwing {
+    display: none;
+  }
+}
 
 .rules {
   margin-top: 100px;
+}
+
+.rules-text {
+  text-align: center;
+  margin: 10px;
+}
+
+.rules-candle {
+  margin: 20px auto;
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .rules-candle {
+    display: block;
+  }
 }/*# sourceMappingURL=index.css.map */

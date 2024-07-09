@@ -588,7 +588,7 @@
                 </div>
             </div>
             <a class="addButton" onclick="return addField()" href="#">Добавить участника</a>
-            <button class="goButton" type="submit">Создать игру!</button>
+            <button id="like_button_container" class="goButton" type="submit">Создать игру!</button>
             <div class="messageDiv"></div>
         </form>
         <div class="cat-container">
@@ -608,6 +608,10 @@
             <img class="trees" src="assets/images/trees.png" alt="">
         </div>
     </footer>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <!-- Загрузим наш React-компонент. -->
+    <script src="like_button.js"></script>
     <script src="index.js"></script>
 </body>
 

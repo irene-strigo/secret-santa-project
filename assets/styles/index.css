@@ -1,10 +1,12 @@
 @charset "UTF-8";
+
 @font-face {
   font-family: "matterhorn";
   src: url("matterhorn_rus_by_me.woff2") format("woff2"), url("matterhorn_rus_by_me.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 html {
   height: 100%;
 }
@@ -23,6 +25,7 @@ body {
   font-style: italic;
   background-color: rgb(186, 210, 191);
 }
+
 @media screen and (max-width: 768px) {
   .santaForm {
     width: 80%;
@@ -40,6 +43,7 @@ body {
   display: flex;
   flex-direction: row;
 }
+
 @media screen and (max-width: 768px) {
   .field {
     display: block;
@@ -104,6 +108,7 @@ body {
   max-width: 200px;
   max-height: 120px;
 }
+
 @media screen and (max-width: 768px) {
   .logoimg {
     max-width: 120px;
@@ -116,6 +121,7 @@ body {
   grid-row: 1;
   padding-top: 2rem;
 }
+
 @media screen and (max-width: 768px) {
   .header__container_menu {
     grid-column: 1/4;
@@ -133,6 +139,7 @@ body {
 .hamitems {
   display: flex;
 }
+
 @media screen and (max-width: 768px) {
   .hamitems {
     display: none;
@@ -148,6 +155,7 @@ body {
   text-align: center;
   border: 2px dashed transparent;
 }
+
 @media screen and (max-width: 768px) {
   .hamitems a {
     box-sizing: border-box;
@@ -157,6 +165,7 @@ body {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 992px) {
   .hamitems a {
     padding: 5px;
@@ -184,6 +193,7 @@ body {
     top: -115px;
   }
 }
+
 @media screen and (min-width: 768px) {
   .hamnav label {
     top: -40px;
@@ -191,7 +201,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .hamnav input:checked ~ .hamitems {
+  .hamnav input:checked~.hamitems {
     display: block;
     background: linear-gradient(white, red);
     padding-top: 10em;
@@ -205,6 +215,7 @@ body {
   font-size: 3em;
   color: rgba(180, 14, 14, 0.8);
 }
+
 @media screen and (max-width: 576px) {
   .heading {
     margin-top: 1.6em;
@@ -221,6 +232,7 @@ body {
   grid-row: 1/3;
   grid-column: 3;
 }
+
 @media screen and (max-width: 768px) {
   .header-tree {
     display: none;
@@ -273,16 +285,18 @@ body {
   margin: 10px;
   padding: 5px;
   border-radius: 10px;
-  width: 3em;
+  min-width: 3em;
   height: 3em;
   display: flex;
   align-items: center;
 }
+
 @media screen and (max-width: 576px) {
+
   .days-block,
-.hours-block,
-.minutes-block,
-.seconds-block {
+  .hours-block,
+  .minutes-block,
+  .seconds-block {
     font-size: 10px;
     font-weight: 300;
   }
@@ -322,6 +336,7 @@ body {
 .cards {
   display: flex;
 }
+
 @media screen and (max-width: 768px) {
   .cards {
     display: block;
@@ -335,6 +350,7 @@ body {
   border-radius: 10px;
   width: 20em;
 }
+
 @media screen and (max-width: 768px) {
   .info-card {
     width: 80%;
@@ -346,15 +362,19 @@ body {
   0% {
     opacity: 5;
   }
+
   11.11% {
     opacity: 1;
   }
+
   33.33% {
     opacity: 1;
   }
+
   44.44% {
     opacity: 0;
   }
+
   100% {
     opacity: 0;
   }
@@ -364,59 +384,72 @@ body {
   0% {
     opacity: 5;
   }
+
   11.11% {
     opacity: 1;
   }
+
   33.33% {
     opacity: 1;
   }
+
   44.44% {
     opacity: 0;
   }
+
   100% {
     opacity: 0;
   }
 }
+
 @-webkit-keyframes slidein {
   from {
     left: 40%;
     width: 24%;
   }
+
   to {
     left: 34%;
     width: 10%;
   }
 }
+
 @keyframes slidein {
   from {
     left: 40%;
     width: 24%;
   }
+
   to {
     left: 34%;
     width: 10%;
   }
 }
+
 @-webkit-keyframes slidein1 {
   from {
     left: 40%;
     width: 14%;
   }
+
   to {
     left: 1%;
     width: 21%;
   }
 }
+
 @keyframes slidein1 {
   from {
     left: 40%;
     width: 14%;
   }
+
   to {
     left: 1%;
     width: 21%;
   }
 }
+
 .cat-container {
   display: flex;
   flex-direction: column;
@@ -425,6 +458,7 @@ body {
   margin: 0 auto;
   margin-bottom: 20px;
 }
+
 @media screen and (max-width: 768px) {
   .cat-container {
     width: 100%;
@@ -456,34 +490,37 @@ body {
 }
 
 @media screen and (max-width: 700px) {
+
   .hand,
-.hand1 {
+  .hand1 {
     position: absolute;
     width: 5em;
     margin-left: 11em;
   }
 }
+
 .animated1 {
   -webkit-animation-name: slidein;
-          animation-name: slidein;
+  animation-name: slidein;
   -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-duration: 2s;
   display: block;
 }
 
 @media screen and (max-width: 700px) {
   .animated1 {
     -webkit-animation-name: slidein1;
-            animation-name: slidein1;
+    animation-name: slidein1;
   }
 }
+
 .animated2 {
   -webkit-animation-name: scratching;
-          animation-name: scratching;
+  animation-name: scratching;
   -webkit-animation-duration: 16ms;
-          animation-duration: 16ms;
+  animation-duration: 16ms;
   -webkit-animation-iteration-count: 200;
-          animation-iteration-count: 200;
+  animation-iteration-count: 200;
   display: block;
 }
 
@@ -493,7 +530,7 @@ body {
 
 .hand1 {
   -webkit-animation-delay: 5ms;
-          animation-delay: 5ms;
+  animation-delay: 5ms;
 }
 
 #thanksdiv {
@@ -504,6 +541,7 @@ body {
   color: red;
   font-weight: 600;
 }
+
 @media screen and (max-width: 700px) {
   #thanksdiv {
     font-size: 1em;
@@ -537,6 +575,7 @@ body {
 .decoration_image4 {
   width: 50%;
 }
+
 @media screen and (max-width: 768px) {
   .decoration_image4 {
     width: 100%;
@@ -827,41 +866,42 @@ hr {
   display: block !important;
 }
 
-.b-ball_bounce.bounce > .b-ball__i {
+.b-ball_bounce.bounce>.b-ball__i {
   transform: rotate(-9deg);
 }
 
-.b-ball_bounce .b-ball__right.bounce + .b-ball__i {
+.b-ball_bounce .b-ball__right.bounce+.b-ball__i {
   transform: rotate(9deg);
 }
 
-.b-ball_bounce.bounce1 > .b-ball__i {
+.b-ball_bounce.bounce1>.b-ball__i {
   transform: rotate(6deg);
 }
 
-.b-ball_bounce .b-ball__right.bounce1 + .b-ball__i {
+.b-ball_bounce .b-ball__right.bounce1+.b-ball__i {
   transform: rotate(-6deg);
 }
 
-.b-ball_bounce.bounce2 > .b-ball__i {
+.b-ball_bounce.bounce2>.b-ball__i {
   transform: rotate(-3deg);
 }
 
-.b-ball_bounce .b-ball__right.bounce2 + .b-ball__i {
+.b-ball_bounce .b-ball__right.bounce2+.b-ball__i {
   transform: rotate(3deg);
 }
 
-.b-ball_bounce.bounce3 > .b-ball__i {
+.b-ball_bounce.bounce3>.b-ball__i {
   transform: rotate(1.5deg);
 }
 
-.b-ball_bounce .b-ball__right.bounce3 + .b-ball__i {
+.b-ball_bounce .b-ball__right.bounce3+.b-ball__i {
   transform: rotate(-1.5deg);
 }
 
 .pngwing {
   margin-top: -1000px;
 }
+
 @media screen and (max-width: 992px) {
   .pngwing {
     display: none;
@@ -881,8 +921,11 @@ hr {
   margin: 20px auto;
   display: none;
 }
+
 @media screen and (max-width: 992px) {
   .rules-candle {
     display: block;
   }
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */
